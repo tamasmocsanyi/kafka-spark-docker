@@ -9,7 +9,6 @@ consumer = KafkaConsumer(
     group_id='coordinates-group'  # Consumer group ID
 )
 
-
 # Listen for messages from Kafka
 print("Listening to Kafka topic 'coordinates'...")
 for message in consumer:

@@ -12,7 +12,7 @@ def run_kafka_producer():
 # Function to run Spark Job
 def run_spark_job():
     # Run the Spark job script
-    subprocess.run(["spark-submit", "/opt/airflow/dags/spark_job.py"])
+    subprocess.run(["python", "/opt/airflow/dags/spark_job.py"])
 
 # Define the default arguments
 default_args = {
@@ -47,4 +47,4 @@ with DAG(
     )
 
     # Set the task dependencies
-    kafka_producer_task >> spark_job_task
+    #kafka_producer_task >> spark_job_task

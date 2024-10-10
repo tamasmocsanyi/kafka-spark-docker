@@ -27,13 +27,18 @@ def create_postgresql_table():
         )
         cursor = conn.cursor()
         
+        # Truncate the table if it exists
+        truncate_table_query = 'TRUNCATE TABLE IF EXISTS gps_coordinates;'
+        cursor.execute(truncate_table_query)
+        
         # Create table query
         create_table_query = '''
         CREATE TABLE IF NOT EXISTS gps_coordinates (
             id SERIAL PRIMARY KEY,
             longitude FLOAT NOT NULL,
             latitude FLOAT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        TRUNCATE TABLE gps_coordinates
         );
         '''
         # Execute the table creation query

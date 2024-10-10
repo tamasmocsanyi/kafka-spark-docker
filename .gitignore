@@ -1,0 +1,3 @@
+.venv
+airflow/dags/dynamic_table_dag.py
+airflow/logs/

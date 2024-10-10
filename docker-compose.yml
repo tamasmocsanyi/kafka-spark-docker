@@ -118,9 +118,9 @@ services:
    ports:
     - "8080:8080"
    volumes:
-    - C:\Users\tommox\Desktop\GRADED_ASSESMENT\kafka-docker\GPS_PROJECT\airflow\dags:/opt/airflow/dags
-    - C:\Users\tommox\Desktop\GRADED_ASSESMENT\kafka-docker\GPS_PROJECT\airflow\logs:/opt/airflow/logs
-    - C:\Users\tommox\Desktop\GRADED_ASSESMENT\kafka-docker\GPS_PROJECT\airflow\plugins:/opt/airflow/plugins
+    - C:\Users\tommox\Documents\GitHub\airflow-kafka-docker\airflow-kafka-docker\airflow\dags:/opt/airflow/dags
+    - C:\Users\tommox\Documents\GitHub\airflow-kafka-docker\airflow-kafka-docker\airflow\logs:/opt/airflow/logs
+    - C:\Users\tommox\Documents\GitHub\airflow-kafka-docker\airflow-kafka-docker\airflow\plugins:/opt/airflow/plugins
    networks:
     - confluent
    healthcheck:
@@ -141,9 +141,9 @@ services:
       - AIRFLOW_HOME=/opt/airflow 
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
     volumes:
-      - C:\Users\tommox\Desktop\GRADED_ASSESMENT\kafka-docker\GPS_PROJECT\airflow\dags:/opt/airflow/dags
-      - C:\Users\tommox\Desktop\GRADED_ASSESMENT\kafka-docker\GPS_PROJECT\airflow\logs:/opt/airflow/logs
-      - C:\Users\tommox\Desktop\GRADED_ASSESMENT\kafka-docker\GPS_PROJECT\airflow\plugins:/opt/airflow/plugins
+      - C:\Users\tommox\Documents\GitHub\airflow-kafka-docker\airflow-kafka-docker\airflow\dags:/opt/airflow/dags
+      - C:\Users\tommox\Documents\GitHub\airflow-kafka-docker\airflow-kafka-docker\airflow\logs:/opt/airflow/logs
+      - C:\Users\tommox\Documents\GitHub\airflow-kafka-docker\airflow-kafka-docker\airflow\plugins:/opt/airflow/plugins
     networks:
       - confluent
 

@@ -28,7 +28,7 @@ def send_coordinates_to_kafka(topic, coordinates):
             print(f"Error sending message: {e}")
 
 if __name__ == "__main__":
-    file_path = 'C:/Users/tommox/Desktop/GRADED_ASSESMENT/kafka-docker/GPS_PROJECT/coordinates.json'  
+    file_path = 'C:/Users/tommox/Documents/GitHub/airflow-kafka-docker/airflow-kafka-docker/coordinates.json'  
     kafka_topic = 'coordinates'
 
     coordinates = read_coordinates_from_json(file_path)
